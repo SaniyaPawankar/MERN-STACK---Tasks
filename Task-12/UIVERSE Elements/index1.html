@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <style>
+        body {
+            font-family: sans-serif;
+            background: linear-gradient(180deg,black, blue);
+            height: 100vh;
+        }
+
+        .container {
+            width: 320px;
+            height: 50px;
+            background-color: white;
+            border: 2px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            margin: 15rem auto;
+            overflow: hidden;
+            border: 2px solid rgb(14, 14, 14);
+            box-shadow: -3px 3px 10px rgb(192, 185, 185);
+        }
+
+        .container:hover{
+            cursor: pointer;
+            z-index : 10;
+            box-shadow: 3px 3px 25px rgb(192, 185, 185);
+            transform: scale(1.1);
+        }
+
+
+        .link-input {
+            flex: 1;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            padding: 10px;
+        }
+
+        .http {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(219, 217, 217);
+            font-size: 16px;
+            width: 70px;
+            font-weight: 700;
+            color: rgb(65, 63, 63);
+            height: 100%;
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 10px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding-right: 25px;
+        }
+
+        .icon i {
+            font-size: 18px;
+            color: rgb(173, 169, 169);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="http">http://</div>
+        <input type="text" class="link-input" placeholder="Site.com">
+        <div class="icon"><i class="fa-solid fa-link"></i></div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Popup</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body>
+    
+    <label for="chb1">Show pop up element</label>
+    <input id="chb1" type="checkbox" />
+    
+    <div id="target">
+        <div class="container">
+            <div class="pop-up">
+                <div class="google-login">
+                    <div class="text">
+                        <h3 class="title">Login</h3>
+                        <span>New User? <a href="">Register Now</a></span>
+                    </div>
+                    <div class="cta">
+                        <button><img src="./media/google.png"> Continue With Google</button>
+                    </div>
+                    <div class="icons">
+                        <div class="img-container"><img src="./media/facebook.png"></div>
+                        <div class="img-container"><img src="./media/github.png"></div>
+                        <div class="img-container"><img src="./media/linkedin.png"></div>
+                        <div class="img-container"><img src="./media/reddit.png"></div>
+                    </div>
+                    <div class="or">
+                        <p>or</p>
+                    </div>
+                </div>
+
+                <div class="user-login">
+                    <form action="" method="">
+                        <label>Username or Email</label>
+                        <input type="email" placeholder="Username or email" />
+                        <label>Password</label>
+                        <input type="password" placeholder="Enter Password" />
+
+                        <div class="remember">
+                            <div>
+                                <input type="checkbox" />
+                                <span>Remember Me</span>
+                            </div>
+                            <div>
+                                <a href="">Forgot Password</a>
+                            </div>
+                        </div>
+                        <button>Sign In</button>
+                    </form>
+                </div>
+
+                <div class="cta">
+                    <p>By creating this account, you agree to our <b>Privacy Policy & Cookie Policy</b></p>
+                </div>
+            </div>
+
+            <button class="pop-up-close-button">
+                <label for="chb1">
+                    <i class="fa-solid fa-times"></i>
+                </label>
+            </button>
+        </div>
+    </div>
+
+</body>
+
+</html>

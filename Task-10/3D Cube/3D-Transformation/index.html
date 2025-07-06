@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D-CUBE</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 500px;
+            /* border: 2px solid black; */
+            margin: 10rem auto;
+            perspective: 800px;
+        }
+
+        .cube{
+            
+            transform-style: preserve-3d;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform: rotateX(0deg) rotateY(0deg);
+            animation: rotate 10s  3s infinite;
+        }
+
+        @keyframes rotate {
+            50%{
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+        }
+        .face{
+
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            display: flex;
+            top: 0;
+            left: 0;
+            font-size: bold;
+            border: 1px solid rgb(249, 248, 248);
+            box-sizing: border-box;
+            background-color: black;
+            color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .front-face{
+            transform: translateZ(250px);
+        }
+        .back-face{
+            transform: rotateY(180deg) translateZ(250px) ;
+        }
+        .left-face{
+            transform: rotateY(-90deg) translateZ(250px);
+        }
+        .right-face{
+            transform: rotateY(90deg)  translateZ(250px);
+        }
+        .top-face{
+            transform: rotateX(90deg) translateZ(250px);
+        }
+        .bottom-face{
+            transform: rotateX(-90deg) translateZ(250px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="face front-face">front</div>
+            <div class="face back-face">back</div>
+            <div class="face left-face">left</div>
+            <div class="face right-face">right</div>
+            <div class="face top-face">top</div>
+            <div class="face bottom-face">bottom</div>
+        </div>
+    </div>
+</body>
+</html>
