@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+</head>
+
+<body>
+    <h3>User Personal Information</h3>
+    <label for="">
+        Enter your full name :
+        <input type="text" name="fullName" placeholder="Enter you name here" value="" id="fullName" required>
+    </label>
+    <br><br>
+    <label for="emailid">
+        Enter your email id :
+        <input type="email" name="emailid" placeholder="Enter your email here" value="" id="emailid" required>
+    </label>
+    <br><br>
+    <label for="password">
+        Enter your password :
+        <input type="password" name="password" value="" id="password">
+    </label>
+    <br><br>
+    <label for="final">
+        Confirm your password :
+        <input type="password" name="final" value="" id="final" required>
+    </label>
+    <br><br>
+    <label for="gender">
+        Enter your gender :
+    </label>
+    <label for="male">
+        <input type="radio" name="gender" id="male" value="">
+        Male
+    </label>
+    <label for="female">
+        <input type="radio" name="gender" id="female" value="">
+        Female
+    </label>
+    <label for="others">
+        <input type="radio" name="gender" id="others" value="">
+        Others
+    </label>
+    <br><br>
+    <label for="dob">
+        Enter your date of birth :
+        <input type="date" name="dob" value="" id="dob" min="2000/12/31" max="2030/12/31">
+    </label>
+    <br><br>
+    <label for="address">
+        Enter your address :
+        <br><br>
+        <textarea name="address" id="address" cols="30" rows="10" placeholder="Enter your address here"></textarea>
+    </label>
+    <br><br>
+    <label for="country">
+        Select your country :
+        <select name="country" id="country">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Australia">Australia</option>
+        </select>
+</body>
+
+</html>
