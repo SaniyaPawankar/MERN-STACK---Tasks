@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Grid</title>
+    <link rel="stylesheet" href="../Task-13(Bootstrap)/Bootstrap/bootstrap/css/bootstrap.min.css" />
+    <script src="../Task-13(Bootstrap)/Bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+            margin: 3rem 1rem;
+        }
+
+        .card-img-top,
+        .card-img-custom {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .fixed-card {
+            width: 250px;
+        }
+
+        .badge-custom {
+            top: 12px;
+            left: 12px;
+            font-size: 0.75rem;
+            padding: 5px 10px;
+        }
+
+
+        .card-body {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 1st Row -->
+        <div class="row gx-3 gy-4 justify-content-center">
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <img src="./media/shoe1.avif" class="card-img-top" alt="Shoe 1" />
+                    <div class="card-body">
+                        <div class="card-title fw-bold lh-sm">ALDO</div>
+                        <div class="card-text lh-sm">
+                            Men Leather Slip-On Loafer<br />
+                            <div class="price d-flex mt-2 align-items-center">
+                                <p class="fw-bold mb-0" style="font-size: 14px;">Rs. 9599</p>
+                                <p class="text-decoration-line-through text-muted ms-2 mb-0" style="font-size: 12px;">
+                                    Rs. 15999</p>
+                                <p class="text-danger ms-2 mb-0" style="font-size: 12px;">(40% OFF)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat for other 3 cards -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <img src="./media/shoe2.avif" class="card-img-top" alt="Shoe 2" />
+                    <div class="card-body">
+                        <div class="card-title fw-bold lh-sm">Running Shoes</div>
+                        <div class="card-text lh-sm">
+                            Comfortable and lightweight running shoes for daily use.<br />
+                            <div class="price d-flex mt-2 align-items-center">
+                                <p class="fw-bold mb-0" style="font-size: 14px;">Rs. 9599</p>
+                                <p class="text-decoration-line-through text-muted ms-2 mb-0" style="font-size: 12px;">
+                                    Rs. 15999</p>
+                                <p class="text-danger ms-2 mb-0" style="font-size: 12px;">(40% OFF)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <img src="./media/shoe3.avif" class="card-img-top" alt="Shoe 3" />
+                    <div class="card-body">
+                        <div class="card-title fw-bold lh-sm">ALDO</div>
+                        <div class="card-text lh-sm">
+                            Men Leather Slip-On Loafer<br />
+                            <div class="price d-flex mt-2 align-items-center">
+                                <p class="fw-bold mb-0" style="font-size: 14px;">Rs. 9599</p>
+                                <p class="text-decoration-line-through text-muted ms-2 mb-0" style="font-size: 12px;">
+                                    Rs. 15999</p>
+                                <p class="text-danger ms-2 mb-0" style="font-size: 12px;">(40% OFF)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <img src="./media/shoe4.avif" class="card-img-top" alt="Shoe 4" />
+                    <div class="card-body">
+                        <div class="card-title fw-bold lh-sm">ALDO</div>
+                        <div class="card-text lh-sm">
+                            Men Leather Slip-On Loafer<br />
+                            <div class="price d-flex mt-2 align-items-center">
+                                <p class="fw-bold mb-0" style="font-size: 14px;">Rs. 9599</p>
+                                <p class="text-decoration-line-through text-muted ms-2 mb-0" style="font-size: 12px;">
+                                    Rs. 15999</p>
+                                <p class="text-danger ms-2 mb-0" style="font-size: 12px;">(40% OFF)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd Row -->
+        <div class="row gx-3 gy-4 justify-content-center mt-4">
+            <!-- Repeat for 4 cards -->
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <div class="position-relative">
+                        <img src="./media/dress.jpg" class="card-img-custom w-100" alt="Dress" />
+                        <span class="badge bg-danger position-absolute badge-custom">-25%</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-1 lh-sm">White traditional long dress</h6>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-danger fw-bold">$3.99</span>
+                            <small class="text-muted text-decoration-line-through">$5.99</small>
+                        </div>
+                        <div class="mt-2 d-flex align-items-center gap-2">
+                            <span class="border px-2 rounded">S</span>
+                            <span class="border px-2 rounded">M</span>
+                            <span class="border px-2 rounded">L</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span>4.8</span>
+                            <a href="#" class="text-decoration-none text-purple fw-bold">BUY +</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <div class="position-relative">
+                        <img src="./media/denim.jpg" class="card-img-custom w-100" alt="Dress" />
+                        <span class="badge bg-danger position-absolute badge-custom">-25%</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-1 lh-sm">Men's Denim Jacket</h6>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-danger fw-bold">$3.99</span>
+                            <small class="text-muted text-decoration-line-through">$5.99</small>
+                        </div>
+                        <div class="mt-2 d-flex align-items-center gap-2">
+                            <span class="border px-2 rounded">S</span>
+                            <span class="border px-2 rounded">M</span>
+                            <span class="border px-2 rounded">L</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span>4.8</span>
+                            <a href="#" class="text-decoration-none text-purple fw-bold">BUY +</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <div class="position-relative">
+                        <img src="./media/sandals.jpg" class="card-img-custom w-100" alt="Dress" />
+                        <span class="badge bg-danger position-absolute badge-custom">-25%</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-1 lh-sm">Men's Comfort Sandals</h6>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-danger fw-bold">$3.99</span>
+                            <small class="text-muted text-decoration-line-through">$5.99</small>
+                        </div>
+                        <div class="mt-2 d-flex align-items-center gap-2">
+                            <span class="border px-2 rounded">S</span>
+                            <span class="border px-2 rounded">M</span>
+                            <span class="border px-2 rounded">L</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span>4.8</span>
+                            <a href="#" class="text-decoration-none text-purple fw-bold">BUY +</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="card h-100 fixed-card">
+                    <div class="position-relative">
+                        <img src="./media/skirt.jpg" class="card-img-custom w-100" alt="Dress" />
+                        <span class="badge bg-danger position-absolute badge-custom">-25%</span>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-1 lh-sm">Trendy Blouse & Skirt</h6>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="text-danger fw-bold">$3.99</span>
+                            <small class="text-muted text-decoration-line-through">$5.99</small>
+                        </div>
+                        <div class="mt-2 d-flex align-items-center gap-2">
+                            <span class="border px-2 rounded">S</span>
+                            <span class="border px-2 rounded">M</span>
+                            <span class="border px-2 rounded">L</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <span>4.8</span>
+                            <a href="#" class="text-decoration-none text-purple fw-bold">BUY +</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add two more dress cards below similarly... -->
+        </div>
+    </div>
+</body>
+
+</html>

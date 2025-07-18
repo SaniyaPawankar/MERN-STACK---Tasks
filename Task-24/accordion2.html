@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Task-13(Bootstrap)/Bootstrap/bootstrap/css/bootstrap.min.css">
+    <script src="../Task-13(Bootstrap)/Bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2>Accordion with Auto Collapse</h2>
+        <div class="accordion accordion-custom" id="autoAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse1">
+                        Section 1
+                    </button>
+                </h2>
+                <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#autoAccordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, tempora odit in pariatur
+                        deleniti deserunt corrupti magnam molestiae totam cumque aspernatur neque dolorum ipsa a
+                        asperiores voluptatibus reiciendis iusto odio.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse2">
+                        Section 2
+                    </button>
+                </h2>
+                <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#autoAccordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, tempora odit in pariatur
+                        deleniti deserunt corrupti magnam molestiae totam cumque aspernatur neque dolorum ipsa a
+                        asperiores voluptatibus reiciendis iusto odio.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapse3">
+                        Section 3
+                    </button>
+                </h2>
+                <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#autoAccordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, tempora odit in pariatur
+                        deleniti deserunt corrupti magnam molestiae totam cumque aspernatur neque dolorum ipsa a
+                        asperiores voluptatibus reiciendis iusto odio.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
