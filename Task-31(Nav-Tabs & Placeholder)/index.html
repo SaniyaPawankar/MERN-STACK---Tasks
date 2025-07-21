@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav & Tabs</title>
+    <link rel="stylesheet" href="../Task-13(Bootstrap)/Bootstrap/bootstrap/css/bootstrap.min.css" />
+    <script src="../Task-13(Bootstrap)/Bootstrap/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .container {
+            width: 100vw;
+            height: 50px;
+            margin: 2rem auto;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+        .container-1{
+            margin: 2rem auto;
+            width: 80vw;
+            height: auto;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 class="text-center mt-2">Basic Nav</h2>
+    <div class="container">
+        <nav class="nav">
+            <a class="nav-link">Overview</a>
+            <a class="nav-link active">Curriculum</a>
+            <a class="nav-link">Instructors</a>
+            <a class="nav-link">Settings</a>
+            <a class="nav-link disabled">Login</a>
+        </nav>
+      
+    </div>
+    <div class="container-1">
+          <ul class="nav flex-column mb-5">
+            <li class="nav-item">
+                <a class="nav-link active">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ">Sign Up</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active">Contacts</a>
+            </li>
+        </ul>
+    </div>
+
+    <h2 class="text-center mt-2">Nav Tabs</h2>
+    <div class="container-2 m-4 mt-3">
+        <!--Basic Tabs-->
+        <ul class="nav nav-tabs mb-5">
+            <li class="nav-item active"><a class="nav-link active" href="#">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+        </ul>
+        <!-- Pills -->
+        <ul class="nav nav-pills mb-5">
+            <li class="nav-item"><a class="nav-link active" href="#">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
+        </ul>
+         <!-- Justified Tabs -->
+        <ul class="nav nav-tabs nav-justified mb-5">
+            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+        </ul>
+
+        <!--Fill And Justify-->
+         <ul class="nav nav-pills nav-fill mb-5">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+        </ul>
+
+        <!--Tabs With Dropdowns-->
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link ">
+                    Login
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active">
+                    Sign Up
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ">
+                    Profile
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link ">
+                    Settings
+                </a>
+            </li>
+             <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                </a>
+                <ul class="dropdown-menu">
+                   <li class="dropdown-item">Account</li>
+                   <li class="dropdown-item">Privacy</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
