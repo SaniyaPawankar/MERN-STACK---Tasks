@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Bootstrap/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="form">
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputName1" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="services" class="form-label">Needed Services</label>
+                <select class="form-select" id="services" required>
+                    <option selected disabled>Choose Services</option>
+                    <option value="web">Web Development</option>
+                    <option value="app">App Development</option>
+                    <option value="seo">SEO Optimization</option>
+                    <option value="design">UI/UX Design</option>
+                    <option value="consulting">Consulting</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="budget" class="form-label">Budget</label>
+                <select class="form-select" id="budget" required>
+                    <option selected disabled>Select Budget</option>
+                    <option value="5000">₹5,000 - ₹10,000</option>
+                    <option value="10000">₹10,000 - ₹20,000</option>
+                    <option value="20000">₹20,000 - ₹50,000</option>
+                    <option value="50000">Above ₹50,000</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Message</label>
+                <textarea class="form-control" rows="3" placeholder="Your message here..." required></textarea>
+            </div>
+            <div class="sb-btn">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+
+</html>

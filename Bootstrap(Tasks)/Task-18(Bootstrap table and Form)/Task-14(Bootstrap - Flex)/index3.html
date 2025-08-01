@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flex Layout3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .main {
+      width: 650px;
+      border: 2px solid black;
+    }
+
+    .gap-5px {
+      gap: 5px;
+    }
+
+    .header,
+    .footer {
+      height: 70px;
+    }
+
+    .row1,
+    .row2 {
+      height: 250px;
+    }
+
+    .row3 {
+      height: 100px;
+    }
+
+    .hero,
+    .sidebar {
+      width: 35%;
+    }
+
+    .main-content,
+    .extra {
+      width: 65%;
+    }
+
+    .related-img {
+      width: 75%;
+    }
+
+    .related-post {
+      width: 25%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main d-flex flex-column p-2 bg-white">
+
+    <div class="header d-flex justify-content-center align-items-center bg-info text-white">
+      Header
+    </div>
+
+    <div class="row1 d-flex gap-5px mt-2">
+      <div class="hero d-flex justify-content-center align-items-center bg-danger-subtle">Hero</div>
+      <div class="main-content d-flex justify-content-center align-items-center bg-warning">Main Content</div>
+    </div>
+
+    <div class="row2 d-flex gap-5px mt-2">
+      <div class="sidebar d-flex justify-content-center align-items-center bg-success">Sidebar</div>
+      <div class="extra d-flex justify-content-center align-items-center bg-dark text-white">Extra Content</div>
+    </div>
+
+    <div class="row3 d-flex gap-5px mt-2">
+      <div class="related-img d-flex justify-content-center align-items-center bg-success text-white">Related Images</div>
+      <div class="related-post d-flex justify-content-center align-items-center" style="background-color: rgb(234, 117, 223);">Related Posts</div>
+    </div>
+
+    <div class="footer d-flex justify-content-center align-items-center bg-warning text-white mt-2">
+      Footer
+    </div>
+
+  </div>
+</body>
+
+</html>
