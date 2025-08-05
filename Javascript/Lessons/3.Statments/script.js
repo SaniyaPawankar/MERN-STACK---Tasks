@@ -4,6 +4,7 @@
 
 // For example, we can use conditional statements to check if a number is even or odd, or to determine the largest number among several inputs.
 
+/*------------------------------------------------------------Types of Conditional Statements-------------------------------------------------------------------------------------------------*/
 
 // 1) if statement
 // The if statement executes a block of code if a specified condition is true.
@@ -13,11 +14,12 @@
 // }
 
 // Example:
-let number = 10;
-if( number > 5){
+let number1 = 10;
+if (number1 > 5) {
     console.log("The number is greater than 5");
 }
 
+/*------------------------------------------------------------if-else statement-------------------------------------------------------------------------------------------------*/
 
 // 2) if-else statement 
 // The if-else statement executes one block of code if a condition is true, and another block if it is false.
@@ -36,6 +38,7 @@ if (age >= 18) {
     console.log("You are not eligible to vote.");
 }
 
+/*------------------------------------------------------------Nested if statements-------------------------------------------------------------------------------------------------*/
 
 // 3) Nested if statement
 // Nested if statements allow you to check multiple conditions by placing one if statement inside another.
@@ -47,18 +50,18 @@ if (age >= 18) {
 // }
 
 // Example:
-let score = 85;
-if (score >= 90) {
+let score1 = 85;
+if (score1 >= 90) {
     console.log("Grade: A");
 } else {
-    if (score >= 80) {
+    if (score1 >= 80) {
         console.log("Grade: B");
     } else {
         console.log("Grade: C");
     }
 }
 
-
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 // 4) if else if statement
 // The if-else if statement allows you to check multiple conditions in sequence. If one condition
 // is true, the corresponding block of code is executed.
@@ -84,48 +87,79 @@ if (temperature > 30) {
     console.log("It's a cold day.");
 }
 
+/*------------------------------------------------------------------------Switch Statement-----------------------------------------------------------------------------------------------------------------------------*/
 
-/* ---------------------Task----------------------------------- */
-
-let a = window.prompt("Enter a Number: ");
-let b = window.prompt("Enter another Number: ");
-let c = window.prompt("Enter a third Number: ");
-let d = window.prompt("Enter a fourth Number: ");
-// let e = window.prompt("Enter a fifth Number: ");
-
-a = Number(a);
-b = Number(b);
-c = Number(c);
-d = Number(d);
-// e = Number(e);
-
-// if(a > b && a > c && a > d && a > e){
-//     console.log("The largest number is: " + a);
-// }else if ( b > c && b > d && b > e){
-//     console.log("The larget number is: " + b);
-// }else if(c > d && c > e){
-//     console.log("The larget number is: " + c);
-// }else if(d > e){
-//     console.log("The largest number is: " + d);
-// }else{
-//     console.log("The largest number is: " + e);
+// 5) Switch Statement
+// The switch statement allows you to execute different blocks of code based on the value of a variable or expression.
+// Syntax:
+// switch (expression) {
+//     case value1:
+//         // code to be executed if expression equals value1
+//         break;
+//     case value2:
+//         // code to be executed if expression equals value2
+//         break;
+//     // more cases...
+//     default:
+//         // code to be executed if none of the cases match
 // }
 
-
-if (a > b) {
-    if (a > b) {
-        if (a > c) {
-            if (a > d) {
-                console.log("The larget number is: " + a);
-            }
-        }
-    }
-} else if (b > c) {
-    if (b > d) {
-        console.log("The larget number is: " + b);
-    }
-} else if (c > d) {
-    console.log("The largest number is: " + c);
-} else {
-    console.log("The largest number is: " + d);
+// Example:
+let day = 3;
+switch (day) {
+    case 1:
+        console.log("Monday");
+        break;
+    case 2:
+        console.log("Tuesday");
+        break;
+    case 3:
+        console.log("Wednesday");
+        break;
+    case 4:
+        console.log("Thursday");
+        break;
+    case 5:
+        console.log("Friday");
+        break;
+    case 6:
+        console.log("Saturday");
+        break;
+    case 7:
+        console.log("Sunday");
+        break;
+    default:
+        console.log("Invalid day");
 }
+
+/*-----------------------------------------------------------------------------Ternary Operator-------------------------------------------------------------------------------------------------*/
+
+// 6) Ternary Operator
+// The ternary operator is a shorthand way to write an if-else statement. It takes
+// three operands: a condition, a value if true, and a value if false.
+// Syntax:
+// condition ? valueIfTrue : valueIfFalse;
+// Example:
+let isRaining = true;
+let weatherMessage = isRaining ? "Take an umbrella." : "Enjoy the sunshine!";
+console.log(weatherMessage);
+// Example of using the ternary operator to find the largest number among three numbers
+let num1 = 5, num2 = 10, num3 = 7;
+let largest = (num1 > num2 && num1 > num3) ? num1 : (num2 > num3 ? num2 : num3);
+console.log("The largest number is: " + largest);
+// Example of using the ternary operator to check if a number is even or odd
+let numberToCheck = 4;
+let isEven = (numberToCheck % 2 === 0) ? "Even" : "Odd";
+console.log("The number is: " + isEven);
+// Example of using the ternary operator to check if a person is eligible to vote
+let voterAge = 20;
+let eligibility = (voterAge >= 18) ? "Eligible to vote" : "Not eligible to vote";
+console.log("Voter status: " + eligibility);
+// Example of using the ternary operator to determine the grade based on a score
+let score = 85;
+let grade = (score >= 90) ? "A" : (score >= 80 ? "B" : (score >= 70 ? "C" : "D"));
+console.log("Your grade is: " + grade);
+// Example of using the ternary operator to check if a number is positive, negative, or zero
+let number = -5;
+let sign = (number > 0) ? "Positive" : (number < 0 ? "Negative" : "Zero");
+
