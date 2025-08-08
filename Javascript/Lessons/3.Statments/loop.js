@@ -16,36 +16,36 @@
 */
 
 // Example: 
-let i = 0;
-while (i < 5) {
-    console.log("While Loop: " + i);
-    i++;
-}
+// let i = 0;
+// while (i < 5) {
+//     console.log("While Loop: " + i);
+//     i++;
+// }
 
-// 1 to 100 using while loop
+// // 1 to 100 using while loop
 
-let num = 1;
-while (num <= 100) {
-    console.log(num);
-    num++;
-}
+// let num = 1;
+// while (num <= 100) {
+//     console.log(num);
+//     num++;
+// }
 
 // Even numbers from 1 to 100 using while loop
-let evenNum = 1;
-while (evenNum <= 100) {
-    if (evenNum % 2 == 0) {
-        console.log("Even Number: " + evenNum)
-    }
-    evenNum++;
-}
+// let evenNum = 1;
+// while (evenNum <= 100) {
+//     if (evenNum % 2 == 0) {
+//         console.log("Even Number: " + evenNum)
+//     }
+//     evenNum++;
+// }
 
-// Odd numbers from 1 to 100 using while loop
-let oddNum = 1;
-while (oddNum <= 100) {
-    if (oddNum % 2 != 0) {
-        console.log("Odd Number: " + oddNum);
-    }
-}
+// // Odd numbers from 1 to 100 using while loop
+// let oddNum = 1;
+// while (oddNum <= 100) {
+//     if (oddNum % 2 != 0) {
+//         console.log("Odd Number: " + oddNum);
+//     }
+// }
 
 // factorials
 
@@ -77,32 +77,83 @@ if add/sub then 0 */
 
 
 // Sum Of digits of a number using while loop
-let number = 12345;
-let sum = 0;
-let digit = 0;
+// let number = 12345;
+// let sum = 0;
+// let digit = 0;
 
-while(number > 0){
-    digit = number % 10; //get the last digit
-    sum  = sum + digit; //add the digit to sum
-    number = parseInt(number / 10); // remove the last digit
-}
-console.log("Sum of digits: " + sum);
+// while (number > 0) {
+//     digit = number % 10; //get the last digit
+//     sum = sum + digit; //add the digit to sum
+//     number = parseInt(number / 10); // remove the last digit
+// }
+// console.log("Sum of digits: " + sum);
 
 
 // Armstrong Number using while loop
+// let start = 1;
+// let end = 1000;
+// while(start <= end){
+//     let num = start;
+//     let sum = 0;
+//     let digit = 0;
+//     while(num > 0){
+//         digit = num % 10;
+//         sum = sum + (digit * digit * digit); // for 3 digit armstrong number
+//         num = parseInt(num / 10);
+//     }
+//     if(sum === start){
+//         console.log(start + " is an Armstrong number");
+//     }
+//     start++;
+// }
+
+// Prime Number using while loop
+
+// let start = 1;
+// let end = 1000;
+
+// while (start <= end) {
+//     let num = start;
+//     let isPrime = true;
+//     if (num <= 1){
+//         isPrime = false;
+//     } else {
+//         let i = 2;
+//         while (i < num) {
+//             if (num % i === 0) {
+//                 isPrime = false;
+//                 break;
+//             }
+//             i++;
+//         }
+//     }
+//     if (isPrime) {
+//         console.log(num + " is Prime");
+//     }
+//     start++;
+// }
+
+//Prime number from 1 to 1000
 let start = 1;
 let end = 1000;
+
 while(start <= end){
     let num = start;
-    let sum = 0;
-    let digit = 0;
-    while(num > 0){
-        digit = num % 10;
-        sum = sum + (digit * digit * digit); // for 3 digit armstrong number
-        num = parseInt(num / 10);
+    let prime = true;
+    if(num == 1){
+        prime = false;
+    }else{
+        let i = 2;
+        while((i*i) <= num){
+            if(num % i === 0){
+                prime = false;
+                break;
+            }
+            i++;
+        }
     }
-    if(sum === start){
-        console.log(start + " is an Armstrong number");
+    if(prime){
+        console.log(num+" is Prime.");
     }
     start++;
 }
