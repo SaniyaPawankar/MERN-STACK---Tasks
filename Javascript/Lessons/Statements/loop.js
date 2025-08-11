@@ -295,11 +295,11 @@ if add/sub then 0 */
 // Reverse Of a Number
 // let digit = 0;
 // let rev = 0;
-// for (let number = 12345; num > 0; num = (num / 10)) {
-//    digit = num % 10;
-//    rev = rev * 10 + rev;
+// for (let number = 12345; number > 0; number = parseInt(number / 10)) {
+//     digit = number % 10;        
+//     rev = rev * 10 + digit;      
 // }
-// console.log("Reverse of number is"+rev);
+// console.log("Reverse of number is " + rev);
 
 
 
@@ -355,3 +355,13 @@ if add/sub then 0 */
 // }
 
 // console.log("Total Palindrome numbers: " + count);
+
+
+// Factorial Of A number
+
+// let num = 5;
+// let fact = 1;
+// for(let i=1;i<=5;i++){
+//     fact = fact*i;
+// }
+// console.log("Factorial Of "+num+" is "+fact);
