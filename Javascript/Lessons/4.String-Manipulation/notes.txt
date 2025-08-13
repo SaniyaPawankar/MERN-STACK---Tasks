@@ -1,0 +1,10 @@
+
+1.String Basics 
+
+1] Strings are sequences of characters inside single quotes '', double quotes " ", or backticks ` `.
+2] Strings are immutabl -> once created, they cannot be changed; operations return new strings.
+
+let str = "Hello"
+console.log(typeOf(str));
+
+output: string

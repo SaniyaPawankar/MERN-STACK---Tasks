@@ -337,24 +337,24 @@ if add/sub then 0 */
 
 //Palindrome number or not
 
-// let count = 0;
+let count = 0;
 
-// for (let i = 1; i <= 1000; i++) {
-//     let digit = 0;
-//     let reverse = 0;
+for (let i = 1; i <= 1000; i++) {
+    let digit = 0;
+    let reverse = 0;
 
-//     for (let num = i; num > 0; num = parseInt(num / 10)) {
-//         digit = num % 10;
-//         reverse = reverse * 10 + digit;
-//     }
+    for (let num = i; num > 0; num = parseInt(num / 10)) {
+        digit = num % 10;
+        reverse = reverse * 10 + digit;
+    }
 
-//     if (reverse === i) {
-//         console.log(i + " is a Palindrome number.");
-//         count++;
-//     }
-// }
+    if (reverse === i) {
+        console.log(i + " is a Palindrome number.");
+        count++;
+    }
+}
 
-// console.log("Total Palindrome numbers: " + count);
+console.log("Total Palindrome numbers: " + count);
 
 
 // Factorial Of A number
