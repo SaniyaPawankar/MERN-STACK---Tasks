@@ -1,10 +1,221 @@
 
-1.String Basics 
+1. String Basics 
 
 1] Strings are sequences of characters inside single quotes '', double quotes " ", or backticks ` `.
-2] Strings are immutabl -> once created, they cannot be changed; operations return new strings.
+2] Strings are immutable -> once created, they cannot be changed; operations return new strings.
 
 let str = "Hello"
+
+typeof tells the data type: 
 console.log(typeOf(str));
 
 output: string
+
+let string1 = `hello world!`;
+ 
+Properties :
+ 
+.length returns the number of characters in a string (including spaces & symmbols):
+
+console.log(string1.length) ; // output: 13
+
+
+2. Case Conversion
+
+ 1) toUpperCase() -> Converts all letters to uppercase.
+ 2) toLowerCase() -> Converts all letters to lowercase.
+
+ console.log(string1.toUpperCase()); // "HELLO WORLD!"  
+ console.log(string1.toLowerCase()); // "hello world!"
+
+
+3. String Indexing 
+ 
+1) Strings are zero-indexed -> first character at index 0.
+2) You can access characters in two ways:
+
+console.log(string1[0]); // 'h'
+console.log(string1.charAt(0)); // 'h'
+
+If the index is out of range, .charAt() returns an empty string.
+
+4. Slicing Strings 
+
+1) .slice(start,end) -> Extracts part of string from start index to end index-1.
+2) If end is ommitted, it slices till the end.
+
+console.log(string1.slice(0,5)); // "hello"
+console.log(string1.slice(5)); // " world !"
+
+5. Finding Characters 
+
+1) .indexOf("char") -> Returns the first occurence index of a character/string.
+2) .lastIndexOf("char") -> Returns the last occurence index.
+
+console.log(string1.indexOf("l"));      // 2
+console.log(string1.lastIndexOf("l"));  // 9
+
+6. Replacing Text 
+
+1) .replace("old", "new") → Replaces first occurrence.
+2) .replaceAll("old", "new") → Replaces all occurrences.
+
+let str = "this is some data !";
+str = str.replace("is", "was");       // first 'is' only
+str = str.replaceAll("is", "was");    // all 'is'
+
+7. Trimming Spaces 
+
+1) .trim() -> Removes leading and trailing spaces.
+
+let name = "   om kumar   ";
+name = name.trim(); // "om kumar"
+
+8. Capitalizing First Letter of Each Word 
+
+name = name.replace(name.charAt(0), name.charAt(0).toUpperCase()); // "Om kumar"
+
+name = name.replace(
+    name.charAt(name.indexOf(" ") + 1),
+    name.charAt(name.indexOf(" ") + 1).toUpperCase()
+); // "Om Kumar"
+
+console.log(name);
+
+
+9. substring()
+
+1) Extracts characters from a string between two indexes(startIndex,endIndex)
+2) Negative indexes treated as 0.
+3) If start > end it swaps them automatically 
+4) Original string not modified
+
+let str = "Javascript"
+
+console.log(str.substring(0,4)); // "Java" (from 0 to 3)
+console.log(str.substring(4)); // "script" (from index 4 to end)
+console.log(str.substring(6,4)); // "sc" (swaps to substring(4,6))
+console.log(str.substring(-3,4)); // "Java" (negative treated as 0);
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// Difference between slice and substring
+
+let str = "JavaScript"
+
+1) Basic range
+
+console.log(str.slice(0,4)); // "Java"
+console.log(str.substring(0,4)); //"Java"
+
+
+2) Only start index
+
+console.log(str.slice(4)); // "Script"
+console.log(str.substring(4)); // "Script"
+
+
+3) Negative index
+
+1.slice()
+
+console.log(str.slice(-6)); // "Script"
+
+If a parameter is negative, slice() adds the string length to it. It counts from the end.
+
+Here, length = 10
+start = -6 -> start = length + start = 10-6 = 4
+so start index become 4.
+
+
+console.log(str.(-8,-2)); // "vaScri"
+
+start = -8 -> 10-8 = 2
+end = -2 -> 10-2 = 8
+
+2.substring()
+
+If a parameter is negative, it is replaced with 0.
+If start > end after conversion, it swaps them.
+
+Example:
+
+let str = "JavaScript";
+console.log(str.substring(-6)); // "JavaScript"
+
+here, start index = -6 -> 0.
+end is omitted -> it becomes length = 10;
+
+console.log(str.substring(-8, -2)); // ""
+
+start = 0
+end = 0
+
+
+4) Negative end
+
+
+console.log(str.slice(0, -1));     // "JavaScrip"
+console.log(str.substring(0, -1)); // ""
+
+slice() -> 
+
+start = 0  will stay as it is
+end = -1 -> end = length + end(-1) -> 10-1 = 9
+
+substring() -> 
+
+start = 0
+end = 0
+
+slice converts negative end to a positive index from the end; substring turns it into 0.
+
+
+
+5) Both Negative 
+
+console.log(str.slice(-8, -2));     // "vaScri"
+console.log(str.substring(-8, -2)); // ""
+
+slice -> 
+
+start = -8 → 10 - 8 = 2
+end = -2 → 10 - 2 = 8
+Extract from index 2 to 8 → "vaScri".
+
+substring -> 
+
+start = -8 → becomes 0
+end = -2 → becomes 0
+(0,0) → "".
+
+slice can use both negatives to define a range but substring turns both into 0.
+
+6) Startindex > EndIndex
+
+console.log(str.slice(6, 4));     // ""
+console.log(str.substring(6, 4)); // "Sc"
+
+slice -> start>end , slice() will return "" empty string
+substring -> it will swap the indexes
+
+
+7) StartIndex === EndIndex
+
+console.log(str.slice(3, 3));     // ""
+console.log(str.substring(3, 3)); // ""
+
+Both will return "" empty string
+
+8) Out of range indexes
+
+let str = "Hello"; // length = 5
+
+console.log(str.slice(1, 10)); // "ello"
+// End = 10 → bounds  to length (5)
+
+console.log(str.substring(1, 10)); // "ello"
+// End = 10 → bounds to length (5)
+
+

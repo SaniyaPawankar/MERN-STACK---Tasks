@@ -3,16 +3,17 @@
 
 //wap to get reverse of a string
 
-// let fname = "Saniya";
-// let newName = "";
-//fname = trim.(fname);
+let fname = " Saniya ";
+let newName = "";
+fname = fname.trim();
 
-// for (let i = fname.length - 1; i >= 0; i--) {
-//     newName = newName + fname.charAt(i);
-// }
+for (let i = fname.length - 1; i >= 0; i--) {
+    newName = newName + fname.charAt(i);
+}
 
-// console.log(newName);
+console.log(newName);
 
+// console.log(fname.substring(4,2));
 
 // wap to count a specific character in a string
 // let str = "Alisha";
