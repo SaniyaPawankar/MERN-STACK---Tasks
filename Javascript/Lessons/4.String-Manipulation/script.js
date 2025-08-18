@@ -44,3 +44,29 @@
 //         console.log(str2.charAt(i));
 //     }
 // }
+
+
+let str1 = "Hello World!";
+let str2 = "";
+
+for (let i = 0; i < str1.length; i++) {
+    let present = false;
+    for (let j = 0; j < str2.length; j++) {
+        if (str1.charAt(i) === str2.charAt(j)) {
+            present = true;
+            break;
+        }
+    }
+    if (!present) {
+        str2 = str2 + str1.charAt(i);
+        let char = str1.charAt(i);
+        let charCount = 0;
+        for (let i = 0; i < str1.length; i++) {
+            if (char === str1.charAt(i)) {
+                charCount++;
+            }
+        }
+        console.log(`${char} appears ${charCount} times`);
+    }
+}
+console.log(str2);
