@@ -1,19 +1,32 @@
 
-// let date = new Date();
+let date = new Date();
 
-// console.log(date.getDate());
-// console.log(date.getMonth() + 1);
-// console.log(date.getTime());
-// console.log(date.getFullYear());
-// console.log(date.getHours());
-// console.log(date.toDateString());
-// console.log(date.toTimeString());
-// console.log(date.getTimezoneOffset());
-// console.log(date.toUTCString());
-// console.log(date.toISOString());
-// console.log(date.getMilliseconds());
+//setters 
 
-// console.log(`Current date is ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
+date.setFullYear(2000,7,3);
+date.setHours(12);
+date.setMinutes(45);
+date.setSeconds(2300);
+date.setDate(29);
+date.setMonth(9);
+
+//getters 
+
+console.log(date.getDate());
+console.log(date.getMonth() + 1);
+console.log(date.getTime());
+console.log(date.getFullYear());
+console.log(date.getHours());
+console.log(date.toDateString());
+console.log(date.toTimeString());
+console.log(date.getTimezoneOffset());
+console.log(date.toUTCString());
+console.log(date.toISOString());
+console.log(date.getMilliseconds());
+console.log(date.toLocaleDateString());
+console.log(date.toLocaleTimeString());
+
+console.log(`Current date is ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`);
 
 let boy1 = {
     b_name: "Amit",
