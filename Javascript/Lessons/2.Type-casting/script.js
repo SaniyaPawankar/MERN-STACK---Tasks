@@ -25,10 +25,7 @@ Rules :
 operations.
 */
 
-
-
-
-/* 2) Explaicit Type Conversion(Type Casting):
+/* 2) Explicit Type Conversion(Type Casting):
    You can manually convert values using built-in functions or constructors.
 
    1) Number -> String 
@@ -137,6 +134,5 @@ let score = 95;
 alert("Your score is: " + String(score));
 
 // Ensures the score is displayed as a string, not concatenated with other strings.
-
 
 */

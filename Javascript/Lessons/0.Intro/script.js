@@ -9,6 +9,7 @@ It's an interpreted language that executes code line by line, providing more fle
 
 // Client Side: Runs in the user's browser, used for interactivity and dynamic content.
 console.log("Hello, World!"); // Example of client-side JavaScript
+
 // Server Side: Runs on the server, used for backend operations and database interactions.
 // Example of server-side JavaScript (Node.js)
 

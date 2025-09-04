@@ -1,17 +1,17 @@
 // Defination :- A function in Javascript is a reusable block of code designed to perform a specific task which can be called multiple times.
 
 // Ways to create a function / module
- 
+
 // 1) Using function keyword
 
-function function_name(args[optional]){
+function function_name(args[optional]) {
     //function body
     // return statement(optional)
 }
 
 // 2) ES6(Arrow / Fat Arrow Functions, Modules, Callbacks)
 
-let function_name = (args[optional]){
+let function_name = (args[optional]) => {
     //function body
     // return statement(optional)
 }
@@ -28,7 +28,7 @@ function_name(args[optional]);
 
 // 1) No arguments, no return
 
-function greet(){
+function greet() {
     console.log("Hello!");
 }
 
@@ -36,8 +36,8 @@ function greet(){
 
 let name = "Ayush";
 
-function greet(name){
-    console.log("Hello "+name);
+function greet(name) {
+    console.log("Hello " + name);
 }
 
 // 3) No arguments, return value
@@ -52,7 +52,7 @@ function sum(a, b) {
     return a + b;
 }
 
-console.log(sum(1,2));
+console.log(sum(1, 2));
 
 
 // Function Declaration :
@@ -77,13 +77,13 @@ console.log(greet("Saniya"));  // Output: Hello Saniya
 // Functions can also be defined using function expressions or arrow functions.
 
 // Function Definition (via expression)
-const greet = function(name) {
+const greet = function (name) {
     return "Hello " + name;
 };
 
 console.log(greet("Saniya")); // Output: Hello Saniya
 
-// Key Points:- 
+// Key Points:-
 // Function Declaration → Uses function keyword, is hoisted.
 // Function Definition → The actual implementation (can be via declaration, expression, or arrow).
 // In JavaScript, declaration already includes definition (unlike C/C++ where declaration ≠ definition).
