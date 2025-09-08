@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 600px;
+            margin: 5rem auto;
+            border: 2px solid black;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-container {
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 1rem;
+            display: inline-block;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        .input {
+            width: 300px;
+            height: 10px;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            margin: 1rem;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Event Listeners</h1>
+
+        <!--Mouse Events-->
+        <div class="box-container">
+            <div class="box1 box">Box 1</div>
+            <div class="box2 box">Box 2</div>
+            <div class="box3 box">Box 3</div>
+            <div class="box4 box">Box 4</div>
+        </div>
+
+        <!--Keyboard Events-->
+        <label>
+            Keyboard Input:
+            <input type="text" id="inputBox" class="input" placeholder="Type Something..." value="">
+        </label>
+
+        <!-- Form Events -->
+        <form id="myForm">
+            <label>
+                Enter Name:
+                <input type="text" id="nameInput" required class="input" />
+            </label>
+            <br><br>
+            <label>
+                Choose a color:
+                <select id="colorSelect">
+                    <option value="">--Select--</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                </select>
+            </label>
+            <br><br>
+            <label>
+                Dark Mode:
+                <input type="checkbox" id="darkModeToggle" />
+            </label>
+            <br><br>
+            <button type="submit" id="submitbtn">Submit</button>
+        </form>
+
+        <!-- Window Events -->
+        <div class="box" id="scrollBox" style="margin-top:600px;">Scroll Target</div>
+
+        <!-- Output -->
+        <div id="output">Output will appear here...</div>
+
+    </div>
+</body>
+<script src="events.js"></script>
+
+</html>
