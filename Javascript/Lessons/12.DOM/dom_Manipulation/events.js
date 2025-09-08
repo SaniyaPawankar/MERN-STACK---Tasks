@@ -10,6 +10,7 @@ let nameInput = document.querySelector("#nameInput");
 let colorSelect = document.querySelector("#colorSelect");
 let darkModeToggle = document.querySelector("#darkModeToggle");
 let scrollBox = document.querySelector("#scrollBox");
+let container = document.querySelector(".container");
 
 // ---------------- MOUSE EVENTS ----------------
 box1.addEventListener("click", () => {
@@ -49,7 +50,7 @@ inputBox.addEventListener("input", () => {
 // ---------------- FORM EVENTS ----------------
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  nameInput.value = "Form Submitted!";
+  alert("Form Submitted!");
 });
 
 nameInput.addEventListener("focus", () => {
@@ -61,13 +62,14 @@ nameInput.addEventListener("blur", () => {
 });
 
 colorSelect.addEventListener("change", () => {
-  box2.innerHTML = "Color selected: " + colorSelect.value;
+  document.body.style.color = colorSelect.value;
 });
 
 darkModeToggle.addEventListener("change", () => {
   if (darkModeToggle.checked) {
     document.body.style.background = "black";
     document.body.style.color = "white";
+    container.style.border = "1px solid white";
   } else {
     document.body.style.background = "white";
     document.body.style.color = "black";
@@ -76,7 +78,7 @@ darkModeToggle.addEventListener("change", () => {
 
 // ---------------- WINDOW EVENTS ----------------
 window.addEventListener("scroll", () => {
-  scrollBox.innerHTML = "You scrolled!";
+  scrollBox.innerHTML = "scrolled!";
 });
 
 window.addEventListener("resize", () => {
