@@ -88,3 +88,25 @@ window.addEventListener("resize", () => {
 window.addEventListener("load", () => {
   box1.innerHTML = "Page loaded!";
 });
+
+
+// DOM Manipulation Methods 
+
+// 1) document.createElement()
+// 2) document.appendChild()
+// 3) document.removeChild()
+
+
+let output = document.getElementById("output");
+
+// 1) createElement()
+let newPara = document.createElement("p");
+newPara.textContent = "👋 Hi, I was created dynamically!";
+
+// 2) appendChild()
+output.appendChild(newPara);
+
+// 3) removeChild() after 3 seconds
+setTimeout(() => {
+    output.removeChild(newPara);
+}, 3000);
