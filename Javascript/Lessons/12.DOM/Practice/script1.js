@@ -139,41 +139,41 @@ cancelBtn.addEventListener("click", closeUpdateForm);
 
 /*------------------------------------------------------------------------------------------------------------------*/
 
-form.addEventListener("submit", (event) => {
-    event.preventDefault();
+// form.addEventListener("submit", (event) => {
+//     event.preventDefault();
 
-    let entry = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        email: document.getElementById("email").value,
-        date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString()
-    };
-
-
-    entries.push(entry);
-    console.log(entries);
-    displayTable(entry);
-});
-
-table.innerHTML =
-    `<tr>
-    <th>Name</th>
-    <th>Phone</th>
-    <th>Email</th>
-    <th>Time & Date</th>
-    </tr>`;
+//     let entry = {
+//         name: document.getElementById("name").value,
+//         phone: document.getElementById("phone").value,
+//         email: document.getElementById("email").value,
+//         date: new Date().toLocaleDateString(),
+//         time: new Date().toLocaleTimeString()
+//     };
 
 
-function displayTable(entry) {
-    let row = document.createElement("tr");
-    row.style.padding = "10px";
-    row.innerHTML = `
-        <td> ${entry.name} </td>
-        <td> ${entry.phone} </td>
-        <td> ${entry.email} </td>
-        <td> Time: ${entry.time}  Date: ${entry.date} </td>
-    `;
-    table.appendChild(row);
-}
+//     entries.push(entry);
+//     console.log(entries);
+//     displayTable(entry);
+// });
+
+// table.innerHTML =
+//     `<tr>
+//     <th>Name</th>
+//     <th>Phone</th>
+//     <th>Email</th>
+//     <th>Time & Date</th>
+//     </tr>`;
+
+
+// function displayTable(entry) {
+//     let row = document.createElement("tr");
+//     row.style.padding = "10px";
+//     row.innerHTML = `
+//         <td> ${entry.name} </td>
+//         <td> ${entry.phone} </td>
+//         <td> ${entry.email} </td>
+//         <td> Time: ${entry.time}  Date: ${entry.date} </td>
+//     `;
+//     table.appendChild(row);
+// }
 
