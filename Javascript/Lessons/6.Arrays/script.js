@@ -112,7 +112,9 @@
 
 // let nums = [3, 1, 2, 5, 4];
 // nums.sort((a, b) => a - b); // Ascending → [1,2,3,4,5]
+// console.log(nums);
 // nums.sort((a, b) => b - a); // Descending → [5,4,3,2,1]
+// console.log(nums);
 
 
 // 2) Strings 

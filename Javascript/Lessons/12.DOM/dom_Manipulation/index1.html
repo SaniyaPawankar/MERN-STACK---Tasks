@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    button, input {
+      margin: 10px 0;
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+    #parent {
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border: 2px solid #ccc;
+    }
+    #child {
+      padding: 10px 20px;
+      background-color: #90caf9;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Event Object Demo</h1>
+
+  <!-- Example 1: Mouse Event -->
+  <h2>1. Mouse Event</h2>
+  <button id="btn1">Click Me</button>
+
+  <!-- Example 2: Keyboard Event -->
+  <h2>2. Keyboard Event</h2>
+  <input type="text" id="inputBox" placeholder="Type something and check console">
+
+  <!-- Example 3: Form Event -->
+  <h2>3. Form Event</h2>
+  <form id="myForm">
+    <input type="text" placeholder="Enter text">
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- Example 4: Bubbling -->
+  <h2>4. Event Bubbling</h2>
+  <div id="parent">
+    Parent Div
+    <br><br>
+    <button id="child">Child Button</button>
+  </div>
+
+  <script src="eventObject.js"></script>
+
+</body>
+</html>
