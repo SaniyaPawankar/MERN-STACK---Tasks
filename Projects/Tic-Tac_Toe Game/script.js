@@ -117,11 +117,22 @@ startBtn.addEventListener("click", () => {
 });
 
 let timeInterval;
+
+let countdown = 20;
+
 function showCurrentTime() {
+    clearInterval(timeInterval); 
+    countdown = 20;
+    resultClock.innerHTML = "00:00:" + countdown;
+
     timeInterval = setInterval(() => {
-        let now = new Date();
-        let seconds = now.getSeconds();
-        resultClock.innerHTML = `00 : 00 : ${seconds}`;
+        countdown--;
+        resultClock.innerHTML = "00:00:" + countdown;
+
+        if (countdown <= 0) {
+            clearInterval(timeInterval);
+            gameOver = true;
+            resultTitle.innerHTML = "Time's up! Game Over.";
+        }
     }, 1000);
 }
-
