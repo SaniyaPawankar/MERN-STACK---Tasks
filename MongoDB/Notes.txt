@@ -1,0 +1,17 @@
+db.customer-Info.insertOne({
+    _id: 1,
+    name: "Jhon Doe"
+    phone: 8234569078,
+    age: 30,
+    address:{
+      street: "Parvati Nagar, plot no-54",
+      city: "Nagpur",
+      pincode: 440027,
+      state: "Maharashtra"
+    }
+})
+
+db.studentsInfo.insertMany([
+   {_id: 3,name: "Aman Varma",phone: 9763458902,roll_no: 117,age: 21,address: {street: "Pardi",city: "Nagpur",pincode: 440027,state: "Maharashtra"}},
+   {_id: 4,name: "Vijay Pawar",phone: 9689560762,roll_no: 111,age: 22,address: {street: "Juna Babulkheda",city: "Nagpur",pincode: 440027,state: "Maharashtra"}}
+])
