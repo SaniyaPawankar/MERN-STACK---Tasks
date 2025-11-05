@@ -105,6 +105,34 @@ const getFilteredLanguages = (req, res) => {
         res.status(500).json({ message: "unable to get filter data", result: null, err })
     }
 
+
+    const getLanguagesBasedOnId = async(req,res) => {
+        try{
+            let  {id} = req.params;
+            if (!id) throw ("invalid/empty id.");
+            let result = techs.filter((tech) => {return tech.id == id});
+            if (result.length == 0) { res.status(200).json({ message: `language with ${id} id not found !`, result }) }
+            res.status(200).json({ message: `language with ${id} id found!`, result})
+        }catch(err){
+            res.status(400).json({message: "unable to get data", err});
+        }
+    }
+
+    const postNewLanguage = (req,res) => {
+        try{
+            let{ name, duration, difficulty, scope} = req.body;
+
+            if(!name || !duration || !difficulty || !scope) throw ("missing data to create a new language !")
+
+            techs.push({ id: techs.length+1, name, duration, difficulty, scope})
+
+            res.staus(202).json({ message: `new langauge ${name} has been added successfully!`})
+
+        }catch(err){
+            res.status(400).json({ message: "unable to add new language"});
+        }
+    }
+
 }
 
-export { apiIntro, getRandomLanguage, getFilteredLanguages, getAllLanguages };
+export { apiIntro, getRandomLanguage, getFilteredLanguages, getAllLanguages, getLanguagesBasedOnId, postNewLanguage };
