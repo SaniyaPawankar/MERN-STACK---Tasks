@@ -120,7 +120,7 @@ let updateFormData = (index) => {
 }
 
 function closeUpdateForm() {
-    console.log("Update Form CLosed");
+    console.log("Update Form Closed");
     updateFormElement.style.display = "none";
     updateForm.style.display = "none";
 }

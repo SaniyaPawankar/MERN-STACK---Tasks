@@ -1,0 +1,70 @@
+Defination:- React is a JavaScript library for building user interfaces. React is used to build single-page applications. React allows us to create reusable components.
+             React is a maintained by Facebook and a large community of developers.
+
+
+Key Features:- 
+
+1) Declarative: React allows developers to describe the desired UI state, and React takes care of updating the DOM to match that state.
+2) Component-Based: React applications are built using reusable components, which encapsulate their own logic and rendering.
+3) Efficient: React uses a virtual DOM to minimize direct manipulation of the real DOM, resulting in improved performance.
+4) Learn Once, Write Anywhere: React can be used to build web applications, mobile apps[with React Native], and even desktop appplications.
+5) JSX: React uses JSX, a syntax extension to Javascript, to describe the structure of UI components.
+
+
+How Does React Work?
+
+React created a Virtual DOM in memory
+
+Instead of manipulating the browser's DOM directly, React created a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+
+React only changes what needs to be changed!
+
+React finds out what changes have been made, and changes only what needs to be changes.
+
+
+What is JSX
+
+JSX stands for Javascript XML, it allows us to write HTML in React. It makes easier to write and add HTML in React.
+
+Coding JSX 
+
+JSX allows us to write HTML elements in Javascript and place them in the DOM without any createElement() and/or appendChild() methods. JSX converts HTML tags into react elements.
+Here are two examples:-
+
+Ex1
+
+const myElement = <h1>I Love JSX!</h1>;
+createRoot(document.getElementById('root')).render(
+    myElement
+);
+
+Ex2
+
+const myElement = React.createElement('h1',{},'I do not use JSX!');
+createRoot(document.getElementById('root)).render(
+    myElement
+);
+
+As we can see in the first example, JSX allows us to write HTML directly within the JavaScript code.
+JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.
+
+
+Components in React
+
+Components are the building blocks of React applications. They are reusable, self-contained units that manage their own state and render a specific part of the UI. React components can be either functional components or class components.
+
+Functional components are simple JavaScript functions that accept props as arguments and return JSX.
+
+function Welcome(props){
+    return <h1>Hello, {props.name}</h1>;
+}
+
+Class Components
+
+Class components are ES6 classes that extend the React.Component class. They have a render() method that returns JSX can manage their own state using this.state
+
+class Welcome extends React.Component {
+    render(){
+        return <h1>Hello, {this.props.name}</h1>
+    }
+}
