@@ -179,3 +179,81 @@ function App() {
     </BrowserRouter>
   );
 }
+
+/*--------------------------------------Difference Between CRA and via Vite--------------------------------------------------------------------------------------------------------------------------*/
+
+When you build any React app:
+
+1. There's on HTML file(with a <div id="root"></div>).
+2. React code(written in js) runs inside that <div>.
+3. React shows your components (like buttons, text, etc.) on the web page.
+4. Whenever data or state changes, React updates only the part of the screen that changed(not the whole page).
+
+That's called rendering(showing data) and re-rendering(updating when data changes).
+
+1) Using CRA
+
+1. CRA uses a tool called Webpack behind the scenes.
+2. Webpack takes all your React files(JS,CSS,images) and bundles them into one big file.
+3. That big file is then added into the HTML page (index.html inside public folder).
+4. The browser loads that bundle, and React code, Webpack:
+    * Rebuilds that bundle.
+    * Sends it again to your browser.
+    * Your page reloads (or partially updates).
+
+
+This process takes time, especially when the project gets bigger — because Webpack keeps rebuilding the whole bundle.
+
+
+Example in CRA
+---------------
+
+When you change text inside App.js:
+
+<h1>Hello World!</h1>
+
+to:-
+<h1>Hello React!</h1>
+
+
+1) CRA rebuilds your files.
+2) Reloads the browser (sometimes refreshes completely).
+3) Then shows the new text.
+
+That’s how data gets re-rendered and the page reloads.
+
+
+2) Using Vite
+
+1. Vite doesn't bundle everything at once like CRA.
+2. It gives your file directly to the browser using a modern system called ES Modules.
+3. The browser loads only what it needs -- instantly.
+4. When you make a small change in your code, Vite:
+  * Detects the change.
+  * Sends only that changed part to the browser.
+  * React updates the screen immeediately without reloading the whole page.
+
+This is called HMR(Hot Module Replacement) -- it's like updating one piece of puzzle instead of remaking the whole puzzle again.
+
+Example 
+----------
+
+If you change:
+
+<h1>Hello World!</h1>
+
+to:-
+
+<h1>Hello React!</h1>
+
+Vite:
+
+1) Instantly sends only that small change to the browser.
+2) The page updates immeediately, without reloading.
+3) Your text appears changes almost instantly.
+
+
+
+
+1)In CRA, every time you change one word, React rewrites the whole notebook before showing you again.
+2)In Vite, if you change one word, React only updates that single line instantly — the rest stays untouched.
