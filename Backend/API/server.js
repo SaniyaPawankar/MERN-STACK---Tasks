@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import mongoose from "mongoose"
 import {router} from "./routers/router.js";
 
 dotenv.config({ path: "./config.env"});
@@ -13,6 +14,8 @@ app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}))
 
 app.use(express.json());
+
+mongoose.connect(process.env.MONGODB_CONNECTION_STRING);
 
 app.get("/", (req,res) => {
     res.status(301).redirect("/api/techs/learn_api");

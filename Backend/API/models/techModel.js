@@ -8,6 +8,6 @@ const techSchema = new mongoose.Schema({
     scope: [String],
 });
 
-let techModel = mongoose.model("Techs", techSchema);
+let techModel = mongoose.model("techs", techSchema);
 
 export {techModel};
