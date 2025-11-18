@@ -257,3 +257,6 @@ Vite:
 
 1)In CRA, every time you change one word, React rewrites the whole notebook before showing you again.
 2)In Vite, if you change one word, React only updates that single line instantly — the rest stays untouched.
+
+
+

@@ -1,10 +1,20 @@
 import React from "react";
+import "../styles/style.scss"
 
 const About = () => {
     return(
         <>
-         <h3>About us</h3>
-         <p>We are learning React.</p>
+         <div>
+            <h3>List</h3>
+            <ol>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Mango</li>
+            </ol>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus, veniam?</p>
+            </div>
+         </div>
         </>
     )
 }

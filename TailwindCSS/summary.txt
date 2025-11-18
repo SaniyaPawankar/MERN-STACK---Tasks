@@ -1,0 +1,5 @@
+/*------------------------Tailwind CSS ----------------------------------------*/
+
+Tailwind CSS is a utility-first CSS framework that allows developers to build modern, responsive, and highly customizable user interfaces directly in HTML instead of writing custom CSS classes for styling, Tailwind provides predefined utility classes for layout, spacing,typography,colors,shadows,and more. 
+This approach promotes rapid development, consistency, and minimal CSS file size. Tailwind also supports responsive design and state-based styling(like hover and focus) out of the box, making it ideal for building modern web applications efficiently.
+

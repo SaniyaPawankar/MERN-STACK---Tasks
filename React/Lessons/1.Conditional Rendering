@@ -1,0 +1,53 @@
+/*------------------------------------Conditional Rendering-------------------------------------------------*/
+
+Defination: Conditional rendering means showing different UI depending on conditions.
+            React lets you use Javascript logic(if, else, &&, ? :) directly inside JSX.
+            But to understand conditional rendering deeply, you must know about state variables and hooks.
+
+1) Why is State Needed in Conditional Rendering?
+
+Conditional rendering always depends on changing data.
+Example Conditions:
+1) User is logged in
+2) dark mode is ON
+3) cart items > 0
+4) form is submitted
+5) API is loading
+
+These values changes over time, so you don't store them in normal variables.
+A normal variable DOES Not update the screen automatically. A state variable does this.
+
+Example:
+
+let isLoggedIn = false; // UI will not update
+
+
+2) What are state variables ?
+
+State variables are special variables that React watches. When they change , react rerenders the component.
+
+ex:
+1)First, import useState from React
+2)Now you can declare a state variable inside your component
+
+
+const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+You'll get two things from useState: the current state(count), and the function that lets you update it.
+You can give any names, but the convention is to write [something,setSomething].
+
+setIsLoggedIn(true); // React automatically updates the UI.
+
+
+3) What Are Hooks? Why they are used/needed?
+
+Functions starting with use are called Hooks.
+Hooks are special React functions that let you use React features.
+
+For conditional rendering, the main hook is:
+
+useState → store values that control the UI
+
+useEffect → run logic that may change conditions (like fetching data, timers)
+
+Without hooks, you cannot make the UI update based on conditions.
