@@ -6,10 +6,15 @@ const Component2 = () => {
         name: "",
         phone: "",
         email: "",
-        address: ""
+        address: "",
+        password: ""
     })
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const nameRegex =  /^[A-Za-z]{3,}(?:\s+[A-Za-z]{3,})+$/;
+    const phoneRegex = /^[6-9]\d{9}$/;
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/
+
 
 
 
@@ -23,9 +28,7 @@ const Component2 = () => {
     }
 
 
-    // const checkFormData = (formEntries) => {
-    //     if()
-    // }
+   
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -60,7 +63,7 @@ const Component2 = () => {
 
     const handleFormReset = () => {
         setForm({
-            name: "", phone: "", email: "", address: ""
+            name: "", phone: "", email: "", address: "", password: ""
         })
     }
 
@@ -68,11 +71,41 @@ const Component2 = () => {
         <div id="form" className="m-20">
             <form onSubmit={handleFormSubmit} className='w-1/2 flex flex-col gap-5'>
                 <input onChange={handleInputChange} className="bg-gray-200 focus:outline-none focus:ring-3 ring-black-500 transition-all rounded p-4" type="text" placeholder="Enter your name." name="name" value={form.name} />
+                {
+                    form.name && !nameRegex.test(form.name) && (
+                        <div className="text-red-600 text-sm bg-red-50 border border-red-300 p-2 rounded">
+                            Name must contain only letters and be atleast 3 characters long.
+                        </div>
+                    )
+                }
                 <input onChange={handleInputChange} className="bg-gray-200 focus:outline-none focus:ring-3 ring-black-500 transition-all rounded p-4" type="tel" placeholder="Enter you phone number." name="phone" value={form.phone} />
+                {
+                    form.phone && !phoneRegex.test(form.phone) && (
+                        <div className="text-red-600 text-sm bg-red-50 border border-red-300 p-2 rounded">
+                            Please enter a valid 10-digit phone number starting with 6,7,8 or 9.
+                        </div>
+                    )
+                }
                 <input onChange={handleInputChange} className="bg-gray-200 focus:outline-none focus:ring-3 ring-black-500 transition-all rounded p-4" type="email" placeholder="Enter your email" name="email" value={form.email} />
                 {
                     form.email && !emailRegex.test(form.email) && (
-                        <span className="text-red-500 text-sm">Invalid email format</span>
+                        <div className="">
+                            Please enter a valid email address (example: name@example.com).
+                        </div>
+                    )
+                }
+                <input onChange={handleInputChange} className="bg-gray-200 focus:outline-none focus:ring-3 ring-black-500 transition-all rounded p-4" type="password" placeholder="" name="password" value={form.password}/>
+                {
+                    form.password && !passwordRegex.test(form.password) && (
+                        <div className="bg-red-50 text-red-700 border border-red-300 p-3 rounded text-sm">
+                            <p className="font-semibold">Password must contain:</p>
+                            <ul className="list-disc ml-5 mt-1">
+                                <li>At least 8 characters</li>
+                                <li>One uppercase letter</li>
+                                <li>One lowercase letter</li>
+                                <li>One number</li>
+                            </ul>
+                        </div>
                     )
                 }
                 <textarea onChange={handleInputChange} className="bg-gray-200 focus:outline-none focus:ring-3 ring-black-500 transition-all rounded p-4" type="text" placeholder="Enter Address" name="address" value={form.address} rows={10}></textarea>
@@ -101,3 +134,5 @@ const Component2 = () => {
 }
 
 export default Component2
+
+
