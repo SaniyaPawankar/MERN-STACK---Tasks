@@ -2,6 +2,7 @@ import React from "react"
 import Comp1 from "./components/Comp1.jsx"
 import Comp2 from "./components/Comp2.jsx"
 import Login from "./components/Login.jsx"
+import Comp3 from "./components/Comp3.jsx"
 
 function App() {
   
@@ -13,7 +14,8 @@ function App() {
       </h1>
       <Comp1/> */}
       {/* <Comp2/> */}
-      <Login/>
+      {/* <Login/> */}
+      <Comp3/>
     </>
   )
 }

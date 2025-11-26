@@ -1,0 +1,119 @@
+/*--------------------------------------Controlled Components---------------------------------------------*/
+
+Defination: Controlled Components are form elements (input, textares, select) whose value is controlled by react state instead of the browser.
+
+1. Why Do we need State in Forms?
+
+Form values change with every keystroke.
+To make React understand what the user typed, we must store the value in state variables.
+
+Example:
+
+1) user types name
+2) React stores it in state
+3) UI updates
+4) validation becomes easier
+5) submit button can be disabled/enabled
+
+Without state variables, React cannot track what is inside the input.
+
+2.What Exactly Are Controlled Components?
+
+A component is "controlled" when:
+. The value of the form element comes from state
+. The onChange event updates the state
+
+Example:
+
+<input value={name} onChange={(e) => setName(e.target.value)} />
+
+React becomes the single source of truth.
+
+3. Why Are Hooks Needed?
+
+Hooks are needed for two main reasons:
+
+1) Storing the input value
+
+useState() stores the input data.
+
+const [name, setName] = useState("");
+
+2) Running logic when values change
+
+useEffect() can be used to perform validation or auto-save when input changes.
+
+useEffect(() => {
+    console.log("Name changed:", name);
+}, [name]);
+
+Without hooks:
+
+. you can't manage dynamic form behaviour
+. you can't validate inputs
+. you can't update UI based on what user types
+
+
+4. Controlled Component examples
+
+(A) Controlled input
+
+<input value={name} onChange={(e) => setName(e.target.value)} />
+
+(B) Controlled Textarea
+
+<textarea value={bio} onChange={(e) => setBio(e.target.value)} />
+
+(C) Controlled Select
+<select value={city} onChange={(e) => setCity(e.target.value)}>
+  <option>Mumbai</option>
+  <option>Delhi</option>
+</select>
+
+(D) Controlled Checkbox
+<input 
+  type="checkbox"
+  checked={agree}
+  onChange={(e) => setAgree(e.target.checked)}
+/>
+
+
+5. Multiple Inputs With One State Object
+const [form, setForm] = useState({ name: "", email: "" });
+
+function handleChange(e) {
+  setForm({
+    ...form,
+    [e.target.name]: e.target.value
+  });
+}
+
+
+6. Why Are Controlled Components Important?
+
+Because they give:
+
+1) real-time validation
+2) instant feedback 
+3) conditional submit buttons
+4) dynamic errors
+5) controlled behaviour
+6) synchronized UI and data
+
+React stays in full control
+
+
+| Controlled             | Uncontrolled                 |
+| ---------------------- | ---------------------------- |
+| React manages value    | Browser manages value        |
+| Uses `useState`        | Uses `useRef`                |
+| Best for dynamic forms | Best for simple, small forms |
+
+
+Controlled Components
+
+(1) Controlled components use state variables for form values.
+(2) State updates through hooks (useState) on every change.
+(3) This makes validation, dynamic UI, and form handling easy.
+(4) Hooks like useEffect can perform actions whenever values change.
+(5) Without hooks/state, React cannot manage form data.
