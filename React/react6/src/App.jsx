@@ -5,15 +5,16 @@ import Component1 from './components/Component1.jsx'
 //Data Provider
 
 import { DataProvider  } from './contexts/DataContext.jsx'
+import { FormProvider } from './contexts/FormContext.jsx'
 import Component2 from './components/Component2.jsx'
+import Form1 from "./components/Form1.jsx"
 
 function App() {
   return (
     <>
-      <DataProvider>
-       <Component1/>
-       <Component2/>
-      </DataProvider>
+      <FormProvider>
+       <Form1/>
+      </FormProvider>
     </>
   )
 }

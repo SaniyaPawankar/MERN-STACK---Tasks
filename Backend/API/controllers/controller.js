@@ -1,5 +1,5 @@
-// import { techs } from "../Data/languageData.js";
-import { techModel } from "../models/techModel.js";
+import { techs } from "../Data/languageData.js";
+// import { techModel } from "../models/techModel.js";
 
 const apiIntro = async (req, res) => {
     res.status(200).json({
@@ -43,19 +43,19 @@ const apiIntro = async (req, res) => {
     })
 }
 
-// const getAllLanguages = (req, res) => {
-//     res.status(200).json({ message: `got all ${techs.length} languages for you !`, techs })
-// }
-
-const getAllLanguages = async (req, res) => {
-    try {
-        const allTechs = await techModel.find();
-        // console.log(allTechs);
-        res.status(200).json({ message: `Got All ${allTechs.length} languages`, techs: allTechs });
-    } catch (err) {
-        res.status(500).json({ message: "Error in getting languages", err });
-    }
+const getAllLanguages = (req, res) => {
+    res.status(200).json({ message: `got all ${techs.length} languages for you !`, techs })
 }
+
+// const getAllLanguages = async (req, res) => {
+//     try {
+//         const allTechs = await techModel.find();
+//         // console.log(allTechs);
+//         res.status(200).json({ message: `Got All ${allTechs.length} languages`, techs: allTechs });
+//     } catch (err) {
+//         res.status(500).json({ message: "Error in getting languages", err });
+//     }
+// }
 
 // const getRandomLanguage = (req, res) => {
 //     let randomNo = Math.floor((Math.random() * 98) + 1);

@@ -1,0 +1,107 @@
+(1) 
+//react6/src/components/Form1.jsx
+import React from 'react'
+//Importing React library so that JSX can work
+
+import { useFormContext} from "../contexts/FormContext.jsx"
+//Importing the custom hook useFormContext , which allows us to read values from FormContext(file).
+
+const Form1 = () => {
+    //Declaring a React functional component named Form1.
+
+    let { input, updateInput } = useFormContext()
+    //Calling useFormContext(), which returns an object { input, updateInput }.
+    //We are using object destructuring to extract:
+    // -input -> the current value stored in context
+    // -updateInput -> a function that updates the input value
+
+    return(
+        // The JSX that this component should render in the UI starts here.
+
+        
+    <div>
+      <h2>Form Data</h2>
+      <input 
+        type="text" 
+        name="name" 
+        value={input} 
+        onChange={(e) => updateInput(e.target.value)}
+      />
+      <h3>{input}</h3>
+    </div>
+
+      // value={input} → The input value is controlled by React via context.
+      // onChange → Every time user types something:
+      //    - event e is triggered
+      //    - e.target.value contains the new text
+      //    - updateInput() is called to update the global context value
+    )
+}
+
+----------------------------------------------------------------------------------------------------------
+
+(2) FormContext.jsx
+
+import React, {useContext, createContext, useState} from 'react'
+// Importing React so we can use JSX.
+// useContext → used to access values from a React Context.
+// createContext → used to create a new Context.
+// useState → used to create and manage a state variable.
+
+let FormContext = createContext()
+// Creating a context named FormContext
+// This creates a "global storage area" that components can access.
+// Initially it contains nothing (undefined) until wrapped by Provider.
+
+const FormProvider = ({children}) => {
+    // Creating a component , it receives children , which means any component wraps inside it.
+    // This component will provide context values to its children.
+
+    let [input, setInput] = useState("Good")
+    // Declaring a state variable `input` with default value "Good".
+    // setInput is the function that updates the state.
+   // This state will be shared globally using context.
+
+   const updateInput = (newValue) => {
+    // Creating a function updateInput that accepts newValue.
+    // This function will be used by components to update the input value.
+
+    setInput(newValue)
+    // Updating the input state to the new value.
+
+    return (
+        <FormContext.Provider value={{input,updateInput}}>
+
+        //FormContext.Provider → makes values available to all children components.
+        //value={{input, updateInput}} → we pass an object containing:
+         input → the current global state value
+         updateInput → function to change the state
+        //Any component using this context can now access and modify these values.
+
+
+        {children}
+
+        // This renders all the child components wrapped inside FormProvider.
+        // Example: <FormProvider><Form1/></FormProvider> → Form1 appears here.
+
+        </FormContext.Provider>
+    )
+   }
+
+}
+
+
+const useFormContext = () => {
+    //Declaring a custom hook named useFormContext.
+
+    return useContext(FormContext)
+
+    // useContext(FormContext) -> allows any component to access the context values.
+    // It returns { input, updateInput } from FormContext.Provider
+
+}
+
+export {FormProvider, useFormContext}
+// Exporting both:
+// FormProvider → to wrap the app or components
+// useFormContext → to use context values inside components
