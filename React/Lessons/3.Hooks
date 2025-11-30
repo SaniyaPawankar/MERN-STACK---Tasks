@@ -1,0 +1,100 @@
+/*----------------------------------------React Hooks-------------------------------------------------------------------------------*/
+
+React Hooks were introduced in React 16.8 to let you use state,  lifecycle methods, and other React features without writing classes.
+
+
+(1) Why Hooks Were Introduced
+Hooks were created because class components had problems:
+
+Problems with Class Components:-
+
+1.Logic was scattered across lifecycle methods (componentDidMount, componentDidUpdate).
+2.Hard to reuse logic between components.
+3."this" keyword created confusion.
+4.Code became large and difficult to test.
+
+
+(2) Hooks Fix These:
+
+1.Remove the need for classes.
+2.Allow stateful logic inside functions.
+3.Let you reuse logic through custom hooks.
+4.Provide cleaner, smaller, testable code.
+
+
+(3) What are hooks?
+
+Hooks are special functions that let functional components use React features like:
+1. State
+2. Side effects
+3. Context
+4. Reusable logic
+
+React Built-in Hooks:
+
+1)useState → State in functional components
+2)useEffect → Side effects
+3)useContext → Global state
+4)useRef → Mutable values + DOM references
+5)useReducer → Complex state logic
+6)useMemo, useCallback → Performance optimization
+7)useTransition, useDeferredValue → Concurrent features
+
+
+(4) Rules Of Hooks
+
+1. Only call hooks at the top level
+   . Not inside loops
+   . Not inside conditions
+   . Not inside nested functions
+
+2. Only call hooks inside React functions
+   . Components
+   . Custom hooks
+
+(5) Core Hooks
+
+1. useState - For State variables
+
+useState is a React Hook that lets you add a state variable to your component.
+Used to store dynamic values(input, toggle, counter)
+
+example:
+
+const [ count, setCount] = useState(0)
+
+1) It re-renders the UI when value updates.
+2) Controls interactive components(form, toggles);
+
+
+2. useEffect - For Side effects
+
+useEffect is a React Hook that lets you synchronize a component with an external system. It runs after rendering.
+
+What is Side Effect?
+
+Anything outside React:
+1)Fetching API data
+2)Updating document title
+3)Subscribing to events
+4)Setting timers
+
+Ex:
+
+useEffect(() => {
+    fetchData()
+}, [])
+
+Dependency Array:
+
+. [] -> run only once.
+. [value] -> run when value changes
+. no array -> run on every render(rarely used).
+
+
+3. useContext - For Global State
+
+useContext is a react hook that lets you read and subscribe to context from your component.
+
+
+

@@ -8,14 +8,14 @@ const DisplayData = (props) => {
                     return (
                         <div
                             key={index}
-                            className='p-4 w-64 rounded-lg bg-white shadow-sm border border-double border-black'
+                            className='p-4 w-64 rounded-lg bg-white shadow-sm border border-black border-double '
                         >
                             <ul className='space-y-1 text-gray-700'>
                                 <li className='font-bold text-lg'>{item.name}</li>
                                 <li>Difficulty: {item.difficulty}</li>
                                 <li>Duration: {item.duration}</li>
                                 <li> Used For : 
-                                    <ol className='pl-5 list-disc'>
+                                    <ol className='pl-5 list-decimal'>
                                         {item.scope.map((item, index) => { return (<li key={index}>{item}</li>) })}
                                     </ol>
                                 </li>

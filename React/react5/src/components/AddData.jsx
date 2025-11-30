@@ -1,5 +1,5 @@
 
-import React, {  useState } from 'react'
+import React, { useState } from 'react'
 
 const AddData = (props) => {
 
@@ -11,16 +11,16 @@ const AddData = (props) => {
     });
 
     const handleChange = (e) => {
-        let {name, value} = e.target;
+        let { name, value } = e.target;
 
         setForm(prev => {
-            return{
-                ...prev, [name]:value
+            return {
+                ...prev, [name]: value
             }
         })
     }
 
-    
+
     const handleSubmit = (e) => {
         e.preventDefault();
         let language = form;
@@ -30,6 +30,10 @@ const AddData = (props) => {
             return [...prev, language]
         })
 
+
+    }
+
+    const handleReset = () => {
         setForm({
             name: "",
             difficulty: "",
@@ -46,11 +50,11 @@ const AddData = (props) => {
                 <div className='flex flex-col items-center'>
                     <div className='flex flex-col gap-2 w-1/2 my-2'>
                         <label htmlFor='language' className='font-thin text-xl'>Language : </label>
-                        <input onChange={handleChange}  type="text" placeholder="Enter the name of language" className='p-2 grow rounded' name="name" value={form.name} required />
+                        <input onChange={handleChange} type="text" placeholder="Enter the name of language" className='p-2 grow rounded' name="name" value={form.name} required />
                     </div>
                     <div className='flex flex-col gap-2 w-1/2 my-2'>
                         <label htmlFor='language' className='font-thin text-xl'>Select the difficulty level : </label>
-                        <select onChange={handleChange}  name="difficulty" value={form.difficulty} className='p-2 grow rounded focus:ring-2 outline-none' required>
+                        <select onChange={handleChange} name="difficulty" value={form.difficulty} className='p-2 grow rounded focus:ring-2 outline-none' required>
                             <option value="">Select difficulty</option>
                             <option value="Easy">Easy</option>
                             <option value="Medium">Medium</option>
@@ -59,7 +63,7 @@ const AddData = (props) => {
                     </div>
                     <div className='flex flex-col gap-2 w-1/2 my-2'>
                         <label htmlFor='language' className='font-thin text-xl'>Select Months(1 to 12) : </label>
-                        <input  onChange={handleChange}  type="range" max={12} step={1} name="duration" value={form.duration} className="p-2 grow rounded outline-none"  required/>
+                        <input onChange={handleChange} type="range" max={12} step={1} name="duration" value={form.duration} className="p-2 grow rounded outline-none" required />
                     </div>
                     <div className='flex flex-col gap-2 w-1/2 my-2'>
                         <label htmlFor="scope">Scope (comma separated) : </label>
@@ -68,7 +72,7 @@ const AddData = (props) => {
 
                     <div className='flex flex-row gap-3 justify-center items-center'>
                         <button type="submit" className="bg-green-400 font-bold rounded px-3 py-2" >Submit</button>
-                        <button type="reset" className='bg-red-500 px-4 py-2 font-bold rounded'>Reset</button>
+                        <button type="reset" onClick={handleReset} className='bg-red-500 px-4 py-2 font-bold rounded'>Reset</button>
                     </div>
                 </div>
             </form>
