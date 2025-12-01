@@ -1,0 +1,58 @@
+✅ Summary of Props in React
+1. What are Props?
+
+Props (short for properties) are like function arguments in JavaScript.
+They allow you to send data from a parent component to a child component.
+
+✅ 2. Why do we use Props?
+
+(1)To reuse components with different data.
+(2)To keep components dynamic and flexible.
+(3)To separate UI structure (component) from data (props).
+
+✅ 3. How Props Work
+
+Props work in one direction only → from parent to child (called one-way data flow).
+
+✅ 4. Sending Props (Parent Component)
+
+<DisplayData languagesArray={techs} />
+
+Here,
+
+languagesArray is the prop name
+
+techs is the value you are sending
+
+✅ 5. Receiving Props (Child Component)
+const DisplayData = (props) => {
+  console.log(props.languagesArray)
+}
+
+
+You receive everything inside a single object called props.
+
+✅ 6. Using Destructuring (Better Way)
+const DisplayData = ({ languagesArray }) => {
+  console.log(languagesArray)
+}
+
+
+This makes the code clean and readable.
+
+✅ 7. Props Are Read-Only
+
+You cannot change props inside the child component.
+They are fixed after being passed from the parent.
+
+⭐ Example to Understand Easily
+function Parent() {
+  return <Child name="Saniya" age={21} />;
+}
+
+function Child(props) {
+  return <p>{props.name} is {props.age} years old.</p>;
+}
+
+
+Parent sends → Child receives → Child displays.
