@@ -1,0 +1,84 @@
+-------------------------------------------------------------------------React Router DOM-------------------------------------------------------------------------------
+
+React Router DOM is a library used in React applications to create multiple pages and navigate between them without reloading the browser. It helps build single-page applications (SPAs) with smooth and fast navigation.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------Why React Router DOM is used----------------------------------------------------------
+
+(1) To create multi-page navigation in React apps.
+(2) To change the URL without refreshing the page.
+(3) To manage browser history (back and forward buttons work).
+(4) To load different components based on the URL path.
+
+Installation
+npm install react-router-dom
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Main Components and Hooks
+
+1. BrowserRouter
+
+Wraps the app and enables routing.
+
+<BrowserRouter>
+  <App />
+</BrowserRouter>
+
+2. Routes and Route
+
+Define which component should show for each URL.
+
+<Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/about" element={<About />} />
+</Routes>
+
+3. Link
+
+Used for navigation without reloading the page.
+
+<Link to="/about">About</Link>
+
+4. useNavigate
+
+Allows navigation using functions.
+
+const navigate = useNavigate();
+navigate("/login");
+
+5. useParams
+
+Reads dynamic route parameters.
+
+Example: /user/10
+
+const { id } = useParams();
+
+6. NavLink
+
+Similar to Link but shows active styling.
+
+7. Nested Routes
+
+Allows layouts with multiple pages inside a main route.
+
+<Route path="/dashboard" element={<Dashboard />}>
+  <Route path="profile" element={<Profile />} />
+</Route>
+
+Additional Concepts
+Redirects
+<Navigate to="/login" />
+
+Not Found Route
+<Route path="*" element={<NotFound />} />
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Key Points
+
+1.Route components must be inside <Routes>.
+2.React Router DOM v6 uses element={<Component />} instead of component={}.
+3.Switch has been replaced by Routes.
+4.useHistory has been replaced by useNavigate.
