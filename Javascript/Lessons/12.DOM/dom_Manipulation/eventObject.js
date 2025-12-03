@@ -1,6 +1,6 @@
 /*
 ==========================================================
- EVENT OBJECT IN JAVASCRIPT - BEGINNER FRIENDLY SUMMARY
+ EVENT OBJECT IN JAVASCRIPT
 ==========================================================
 
 👉 What is it?

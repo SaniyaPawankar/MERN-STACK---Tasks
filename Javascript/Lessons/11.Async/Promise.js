@@ -17,6 +17,11 @@ let promise = new Promise((resolve, reject) => {
     }
 });
 
+let promise1 = new Promise((resolve, reject) => {
+    let result = true;
+    result ? resolve("Promise has been resolved successfully") : reject("Promise has been rejected!")
+})
+
 // then().catch().finally().
 
 promise.then((message) => {
@@ -26,6 +31,16 @@ promise.then((message) => {
 }).finally(() => {
     console.log("Promise is settled (either resolved or rejected).");
 })
+
+
+promise1.then((msg) => {
+    console.log(msg);
+}).catch((err) => {
+    console.log(err);
+}).finally(()=>{
+    console.log("Promise is settled (either resolved or rejected).");
+})
+
 
 // async/await
 
